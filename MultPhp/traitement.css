@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+td {
+    background-color: #ecf0f1;
+} */
+
+a {
+    text-decoration: none;
+}
+
+input[type="button"] {
+    padding: 8px 12px;
+    border: none;
+    background-color: rgb(132, 106, 235);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #2980b9;
+}
+
+.pair {
+    background-color: rgb(187, 177, 229); /* Couleur verte pour les lignes paires */
+}
+
+.impair {
+    background-color: rgb(20, 120, 167); /* Couleur bleue pour les lignes impaires */
+}
