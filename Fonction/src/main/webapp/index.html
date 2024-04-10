@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calcul numerique</title>
+<link rel="stylesheet" href="indes.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+	
+
+<form action="/Fonction/FunctionEvaluator" method="post">
+	<h1>CALCUL NUMERIQUE</h1>
+	<br>
+    <label>entrez votre fonction ( avec x comme paramètre )</label> 
+    <br>
+    <input type="text" name="f" required/>
+    <br>
+    <label>Choisissez l'action</label>
+    <br>
+    <select name="action" id="action" onchange="afficherDiv()">
+        <option value="1">Calcul de f(x) = 0</option>
+        <option value="2">Calcul d'aire de la fonction</option>
+        <option value="3">Calcul de f(x) avec x de votre choix</option>
+        <option value="4">Recherche d'un minimum de la fonction par descente de gardient</option>
+    </select>
+    <div class="resolution">
+        <br>
+        <label>Choisissez votre méthode</label>
+        <br>
+        <select name="method">
+            <option value="1">secante</option>
+            <option value="2">dichotomie</option>
+        </select>
+        <br>
+        <label>entrer les 2 bornes </label> 
+        <br>
+        <input type="number"  name="c" step="any" required>
+        <br>
+        <input type="number"  name="d" step="any" required>
+        <br>
+    </div>
+    
+    <div class="aire" style="display: none;">
+        <label>Choisissez votre méthode pour le calcul d'aire</label>
+        <br>
+        <select name="aire">
+            <option value="1">rectangle</option>
+            <option value="2">trapeze</option>
+            <option value="3">simpson</option>
+        </select>
+        <br>
+        <label>entrer les 2 bornes </label> 
+        <br>
+        <input type="number"  name="g" step="any">
+        <br>
+        <input type="number"  name="h" step="any">
+        <br>
+        <label>entrer n le nombre de sous-intervalles</label> 
+        <br>
+        <input type="number"  name="n" step="any">
+        <br>
+    </div>
+    
+    <div class="egalite" style="display: none;">
+        <label>entrer x</label> 
+        <br>
+        <input type="number"  name="x" step="any">
+        <br>
+    </div>
+    
+    <div class="minimum" style="display: none;">
+		<label>entrer le point de depart</label> 
+        <br>
+        <input type="number"  name="min_d" step="any">
+        <br>
+        <label>entrer le nombre de pas</label> 
+        <br>
+        <input type="number"  name="pas" step="any">
+        <br>
+        
+	</div>
+	<div class="equal-bounds-message"></div>
+
+    <input type="submit" value="envoyer">
+</form>
+
+</body>
+</html>
